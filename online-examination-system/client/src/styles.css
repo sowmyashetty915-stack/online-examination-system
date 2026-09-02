@@ -1,0 +1,414 @@
+
+/* ================================
+   GLOBAL
+================================ */
+
+body {
+  margin: 0;
+  background: #f5f7fb;
+  color: #1f2937;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+}
+
+
+/* ================================
+   HERO SECTION
+================================ */
+
+.hero {
+  min-height: 72vh;
+  background: linear-gradient(
+    135deg,
+    #0d47a1,
+    #1976d2
+  );
+  color: white;
+
+  display: flex;
+  align-items: center;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  background: #ffffff12;
+  top: -120px;
+  right: -80px;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background: #ffffff0d;
+  bottom: -100px;
+  left: -80px;
+}
+
+.hero-art {
+  height: 330px;
+  border-radius: 28px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff22,
+      #ffffff08
+    ),
+    url("/college.svg") center / cover;
+
+  box-shadow:
+    0 25px 60px #001b441f;
+
+  border: 1px solid #ffffff30;
+}
+
+
+/* ================================
+   CARDS
+================================ */
+
+.card {
+  border: 1px solid #e5eaf0;
+  border-radius: 18px;
+
+  box-shadow:
+    0 8px 28px #1f29370f;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 15px 40px #1f29371a;
+
+  border-color: #1976d2;
+}
+
+
+/* ================================
+   GLOWING BORDER CARD
+================================ */
+
+.glow-card {
+  border: 1px solid #1976d2;
+
+  box-shadow:
+    0 0 5px #1976d244,
+    0 0 15px #1976d21f;
+
+  transition: all 0.3s ease;
+}
+
+.glow-card:hover {
+  box-shadow:
+    0 0 8px #1976d266,
+    0 0 25px #1976d244;
+}
+
+
+/* ================================
+   DASHBOARD
+================================ */
+
+.dashboard-shell {
+  min-height: calc(100vh - 56px);
+}
+
+
+/* ================================
+   SIDEBAR
+================================ */
+
+.sidebar {
+  background: #0f172a;
+  min-height: calc(100vh - 56px);
+
+  border-right: 1px solid #1e293b;
+}
+
+.sidebar a {
+  color: #cbd5e1;
+  text-decoration: none;
+
+  display: block;
+
+  padding: 12px 16px;
+
+  border-radius: 10px;
+
+  margin: 4px;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    padding-left 0.2s ease;
+}
+
+.sidebar a:hover {
+  background: #1e293b;
+  color: #fff;
+  padding-left: 20px;
+}
+
+.sidebar a.active {
+  background: #1976d2;
+  color: white;
+
+  box-shadow:
+    0 5px 15px #1976d255;
+}
+
+
+/* ================================
+   EXAM OPTIONS
+================================ */
+
+.option {
+  border: 1px solid #dbe2ea;
+
+  padding: 14px;
+
+  border-radius: 12px;
+
+  margin-bottom: 10px;
+
+  cursor: pointer;
+
+  background: white;
+
+  transition:
+    all 0.2s ease;
+}
+
+.option:hover {
+  border-color: #1976d2;
+
+  background: #f5f9ff;
+
+  transform: translateX(3px);
+}
+
+.option.selected {
+  border-color: #0d6efd;
+
+  background: #eef5ff;
+
+  box-shadow:
+    0 0 0 2px #0d6efd18;
+}
+
+
+/* ================================
+   EXAM TIMER
+================================ */
+
+.timer {
+  font-weight: 800;
+
+  font-size: 1.15rem;
+
+  background: #fff3cd;
+
+  color: #856404;
+
+  padding: 10px 18px;
+
+  border-radius: 12px;
+
+  border: 1px solid #ffe69c;
+
+  box-shadow:
+    0 5px 15px #85640415;
+}
+
+
+/* ================================
+   BUTTONS
+================================ */
+
+.btn {
+  border-radius: 10px;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn-primary {
+  box-shadow:
+    0 5px 15px #0d6efd30;
+}
+
+.btn-primary:hover {
+  box-shadow:
+    0 8px 20px #0d6efd45;
+}
+
+
+/* ================================
+   TABLE
+================================ */
+
+.table-card {
+  overflow: auto;
+}
+
+.table thead {
+  background: #f1f5f9;
+}
+
+.table tbody tr {
+  transition: background 0.2s ease;
+}
+
+.table tbody tr:hover {
+  background: #f8fafc;
+}
+
+
+/* ================================
+   STATISTICS
+================================ */
+
+.stat {
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+
+/* ================================
+   TEXT
+================================ */
+
+.small-muted {
+  color: #64748b;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+
+/* ================================
+   MODAL
+================================ */
+
+.modal-backdrop-custom {
+  position: fixed;
+
+  inset: 0;
+
+  background: #0008;
+
+  display: grid;
+
+  place-items: center;
+
+  z-index: 2000;
+}
+
+.modal-card {
+  background: white;
+
+  padding: 25px;
+
+  border-radius: 18px;
+
+  width: min(420px, 92vw);
+
+  box-shadow:
+    0 25px 70px #0005;
+
+  animation: modalOpen 0.25s ease;
+}
+
+@keyframes modalOpen {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+/* ================================
+   LOGIN / REGISTER
+================================ */
+
+.auth-card {
+  border-radius: 20px;
+
+  border: 1px solid #e2e8f0;
+
+  box-shadow:
+    0 15px 45px #0f172a15;
+}
+
+.auth-card input,
+.auth-card select {
+  border-radius: 10px;
+
+  padding: 11px 14px;
+
+  border: 1px solid #dbe2ea;
+}
+
+.auth-card input:focus,
+.auth-card select:focus {
+  border-color: #1976d2;
+
+  box-shadow:
+    0 0 0 3px #1976d21a;
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: auto;
+
+    padding: 60px 0;
+  }
+
+  .hero-art {
+    height: 230px;
+
+    margin-top: 30px;
+  }
+
+  .timer {
+    font-size: 0.95rem;
+
+    padding: 8px 12px;
+  }
+
+  .stat {
+    font-size: 1.6rem;
+  }
+}
