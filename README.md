@@ -65,4 +65,3 @@ Change this password after first login.
 - `/api/exams` teacher/student exam APIs
 - `/api/questions` teacher question APIs
 - `/api/results` teacher/student result APIs
--
